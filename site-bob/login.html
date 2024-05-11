@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_BOB</title>
+    <link rel="stylesheet" href="loginCSS.css">
+</head>
+
+<body>
+   
+    <div class="imgs"><span class="logo"><img src="assets/bob 1.png" alt=""></span></div>
+
+    <div class="banner">
+
+        <div class="cadastro">
+            <div class="box">
+                <span class="seta" onclick="voltar()"><img src="assets/Arrow 6.png" alt=""></span>
+                <h2>Acesse sua conta</h2>
+            </div>
+
+            <div class="inpt_total">
+                <div class="inpt">Email </div> <input type="text" id="input_email">
+                <div class="inpt">Senha </div> <input type="text" id="input_senha">
+                <span class="button_login"><button>Login</button></span><br>
+            </div>
+            <div class="cadastrar">Ainda não possui Login? <span onclick="cadastrar()" class="aqui"> Cadastre-se</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        window.location.href = `cadastro.html`;
+    }
+    function voltar(){
+    window.location.href = `index.html`;
+}
+</script>

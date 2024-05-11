@@ -1,0 +1,37 @@
+/* Estilos para a header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* Alinha os itens ao máximo da header */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+
+    /* Você não precisa definir a altura da header */
+    & .logo img {
+        width: 50px; /* Ajuste o tamanho conforme necessário */
+        height: auto; /* Mantém a proporção da imagem */
+        margin-left:100%; /* Espaço entre a logo e os links de navegação */
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Alinha os itens da lista horizontalmente */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
