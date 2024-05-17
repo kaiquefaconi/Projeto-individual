@@ -16,18 +16,31 @@
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Poppins';
     background-color: var(--color-dark1);
     color: var(--color-white);
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .logo_header {
-    width: 50px;
-    margin-left: -30px;
+    width: 48px;
+    margin-right: 73px;
+   
     border-radius: 50%;
 
 
+}
+
+.message {
+    color: white;
+}
+
+h3 {
+    display: flex;
+    align-items: start;
+    padding: 10px;
+    color: var(--color-greenyellow);
 }
 
 .header,
@@ -45,7 +58,7 @@ body {
     box-shadow: 1px 1px 4px var(--color-dark4);
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 3
 }
 
 .navigation_header {
@@ -64,9 +77,9 @@ body {
     text-decoration: none;
     color: var(--color-greenyellow);
     transition: 1s;
-    margin-right: 7.3px;
+ 
 }
-.navigation_header .sobre{
+.navigation_header .paises{
     color: white;
 }
 
@@ -92,10 +105,8 @@ body {
     color: var(--color-greenyellow);
     cursor: pointer;
     transition: 1s;
-    font-weight: bold;
-    margin-left: 32px;
-  
-    
+    margin-left: 17px;
+
 }
 
 .login:hover {
@@ -105,9 +116,9 @@ body {
 .cadastro {
     color: var(--color-greenyellow);
     cursor: pointer;
-    margin-right: 100px;
+    margin-left: 8px;
     transition: 1s;
-    font-weight: bold;
+   
 }
 
 .cadastro:hover {
@@ -117,155 +128,220 @@ body {
 .entrada {
     display: flex;
     margin-right: 300px;
+
+
+
+
+
 }
 
-.siteSobre {
+h1 {
+    color: var(--color-greenyellow);
+    margin-top: 50px;
+    margin-bottom: 100px;
     display: flex;
-    justify-content: center;
-
+    align-items: center;
+    margin-left: 650px;
 }
 
-.introducao {
+.bobBiografia {
     display: flex;
-    margin-top: 150px;
-}
-
-
-
-.siteSobre {
-    position: relative;
-    padding-top: 50px;
-}
-
-.imgSobre {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    height: 46vw;
-    z-index: -1;
-}
-
-.textoSobre {
-
-    width: 350px;
-    margin-right: 900px;
-    padding: 20px 20px;
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    margin-top: 20px;
-    
-
+    justify-content: space-between;
 
 }
 
-.sobreTitulo {
-
-    margin-bottom: 20px;
-
+.inicio h3 {
+    margin-bottom: 4px;
 }
 
-.textoSobre p {
-    color: white;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-.banda {
-     
-    border: solid 3px red;
-    height: 150px;
-    cursor: pointer;
-    width: 300px;
-    transition: 0.3s;
-    margin-top: 10px;
-    
-
-
-}
-
-.wailers {
+.coluna1 {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 200px;
-    font-weight: bold;
-    position: absolute;
-    margin-left: 1100px;
-    justify-content: space-between;
-    margin-top: -550px;
-}
-
-.wailers .carreira {
-    border: solid 3px var(--color-greenyellow);
-    width: 200px;
-    cursor: pointer;
-    height: 200px;
-    transition: 1s;
-    margin-bottom: 10px;
+    width: 50%;
+    padding: 40px;
 
 }
 
-.wailers .paz {
-    border: solid 3px yellow;
-    cursor: pointer;
-    height: 200px;
-    width: 200px;
-    transition: 1s;
-  
-}
 
-.banda:hover{
-    transform: scale(1.1);
-}
-.paz:hover{
-    transform: scale(1.1);
-}
-.carreira:hover{
-    transform: scale(1.1);
 
-}
-h1{
-    color: var(--color-greenyellow);
-}
 
-.green {
-    color: var(--color-greenyellow);
-    margin-bottom: 7px;
+.coluna2 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 50px;
+    margin-left: 0px;
+    margin-bottom: 100px;
+}
+
+.imagemBiografia .jamaica {
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+    margin-bottom: 78px;
+    margin-left: 50px;
+    border: solid 3px yellowgreen;
+    border-radius: 50%;
+    transition: 1s;
 
 }
 
-.yellow {
-    color: yellow;
-    margin-bottom: 7px;
-    display: flex;
-    justify-content: center;
-}
-
-.red {
-    color: red;
-
-    margin-left: 130px;
-
+.eua {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 110px;
+    margin-left: 300px;
+    margin-top: 50px;
+    padding: 20px 0px;
 
 }
+
+.eua img {
+    width: 100%;
+    height: 100%;
+    border: solid 3px blueviolet;
+    border-radius: 50%;
+    transition: 1s;
+
+
+}
+
+.reinoUnido {
+    width: 200px;
+    height: 200px;
+    margin-top: 90px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+
+
+}
+
+.reinoUnido img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 3px blue;
+    transition: 1s;
+
+
+}
+
+.brasil {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 300px;
+    margin-bottom: 100px;
+
+
+
+}
+
+.brasil img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    border: solid 3px green;
+    transition: 1s;
+
+
+
+}
+
+.alemanha {
+    width: 200px;
+    height: 200px;
+    margin-top: 110px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+
+}
+
+.alemanha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 3px red;
+    border-radius: 50%;
+    transition: 1s;
+
+
+}
+
+.outros {
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+    margin-left: 300px;
+    /* margin-top: -1px; */
+    border: solid 3px linear-gradient(to bottom, greenyellow, yellow, red);
+
+
+}
+
+.outros img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 3px white;
+    transition: 1s;
+
+}
+
+.ativismo {
+    padding: 0px 0px 70px 0px;
+}
+
+footer img {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.imagemBiografia .jamaica:hover {
+    transform: scale(1.1);
+
+}
+
+.reinoUnido img:hover {
+    transform: scale(1.1);
+
+}
+
+.outros img:hover {
+    transform: scale(1.1);
+
+}
+
+.alemanha img:hover {
+    transform: scale(1.1);
+
+}
+
+.eua img:hover {
+    transform: scale(1.1);
+
+}
+
+.brasil img:hover {
+    transform: scale(1.1);
+
+}
+
+
 .linha {
     width: 100%;
     height: 2px;
-    /* margin-top: 205px; */
     background-color: #fff;
-    margin-bottom: -1px;
-
 }
 
 footer {
     display: flex;
     height: 175px;
     background-color:var(--color-dark5);
- 
 
 
 }
@@ -299,10 +375,9 @@ footer {
     width: 50px;
     height: 50px;
     margin-bottom: -70px;
-    border: solid 2px white;
-    border-radius: 50%;
+    border: solid 2px blue;
+    border-radius: 20px;
     cursor: pointer;
-
 }
 
 .github {
@@ -310,7 +385,6 @@ footer {
     height: 50px;
     border: solid 2px white;
     border-radius: 50%;
-    margin-top: 90px;
     cursor: pointer;
 
 }

@@ -1,51 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Responsivo | GN</title>
-    <link rel="stylesheet" href="indexCSS.css">
-</head>
-<body id="body">
-    <div class="header" id="header">
-     
-
-        <div class="logo_header">
-        <img class="logo_header" src="assets/bob 1.png" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="indexCSS.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body >
+        <div class="header" id="header">
+            <img class="logo_header" src="assets/bob 1.png" alt="">
+            <div class="entrada">
+                <a onclick="login()" class="login">Login |</a>
+                <a onclick="cadastro()" class="cadastro">  Cadastrar-se</a>
+            </div>
+            <div class="navigation_header" id="navigation_header">
+                <a onclick="home()" class="sobre" href="#sobre">Home</a>
+                <a onclick="biografia()" class="biografia" href="#biografia">Biografia</a>
+                <a onclick="paises()" class="paises" href="#paises">Paises</a>
+                <a onclick="musicas()" class="musicas" href="#musicas">Discografia e Canções</a>
+                <a onclick="quiz()" class="quiz" href="#quiz">Quiz</a>
+            </div>
         </div>
-        <div class="entrada">
-        <a onclick="login()" class="login">Login |</a>
-        <a onclick="cadastro()" class="cadastro">  Cadastrar-se</a>
-    </div>
-        <div class="navigation_header" id="navigation_header">
-
-
-         
-
-            <a class="sobre" href="#sobre">Sobre</a>
-            <a class="biografia" href="#biografia">Biografia</a>
-            <a class="paises" href="#paises">Paises</a>
-            <a class="musicas" href="#musicas">Discografia e Canções</a>
-            <a class="quiz" href="#quiz">Quiz</a>
-        </div>
-    </div>
-    <div class="siteSobre">
-        <img class="imgSobre" src="assets/bob_PJ2.jpg" alt="">
-   <h1 class="introducao">Sobre</h1>
-   <div class="textoSobre"><p>Descubra o legado imortal de uma lenda da música. Bob Marley transcende gerações, suas músicas ecoam a voz da liberdade e do amor universal. Navegue conosco pelos bastidores da vida deste ícone, desde suas raízes humildes até sua ascensão como um dos artistas mais influentes da história. Explore suas letras profundas, mergulhe em sua filosofia de paz e igualdade, e deixe-se envolver pelo espírito vibrante do reggae. Seja você um fã dedicado ou um curioso em busca de inspiração, nosso site é seu portal para o mundo de Bob Marley.
-     Deixe-se levar pela música, pelo ativismo e pela alma eterna deste visionário. Bem-vindo ao universo de Bob Marley</p>
-     </div>
-</div>
-</body>
-<script>
- 
-    function login(){
-        window.location.href = `login.html`;
+        
+        <div class="siteSobre">
+            <img class="imgSobre" src="assets/image 28.png" alt="">
+            <div class="textoSobre">
+                <h1 class="sobreTitulo">O Imortal Bob Marley</h1>
+                <p>Descubra o legado imortal de uma lenda da música. Bob Marley transcende gerações, suas músicas ecoam a voz da liberdade e do amor universal. 
+                    Navegue conosco pelos bastidores da vida deste ícone, desde suas raízes humildes até sua ascensão como um dos artistas mais influentes da história. 
+                    Explore suas letras profundas, mergulhe em sua filosofia de paz e igualdade, e deixe-se envolver pelo espírito vibrante do reggae.<br>  
+                    Seja você um fã dedicado ou um curioso em busca de inspiração, nosso site é seu portal para o mundo de Bob Marley. Deixe-se levar pela música, pelo ativismo e pela alma eterna deste visionário. Bem-vindo ao universo de Bob Marley</p>
+                    <span class="red">Quiz</span><br>
+                    <img onclick="quiz()" class="banda" src="assets/bob_PJ2.jpg""></div> 
+                </div>
+                <div class="wailers">
+                    <span class="green">Biografia </span> <img onclick="biografia()" class="carreira" src="https://th.bing.com/th/id/OIG4.mIQ1TnhzTolzgifwwojS?w=1024&h=1024&rs=1&pid=ImgDetMain" alt=""><br>
+                    <span class="yellow">Países</span> <img onclick="paises()" class="paz" src="https://th.bing.com/th/id/OIG2.r3qmEPf97SFuAQE0hAxJ?w=1024&h=1024&rs=1&pid=ImgDetMain   " alt=""><br>
+                    
+                </div>
+                
+                <div class="linha"></div>
+                <footer>
+                    
+                    
+                    <div class="textoFooter"><p>Inspirado pelas mensagens de paz e unidade de Bob Marley, nosso site apoia o <a href="https://www.ipea.gov.br/ods/ods16.html#:~:text=Promover%20sociedades%20pacíficas%20e%20inclusivas,inclusivas%20em%20todos%20os%20níveis" class="onu" onclick="objetivo16()">Objetivo 16 da ONU</a>, 
+                        que busca promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes, 
+                        responsáveis e inclusivas. Junte-se a nós na celebração do legado de Bob Marley e na promoção de um mundo mais justo e harmonioso.
+                    </p></div>
+                    <div class="imgsFooter">
+                        <img class="linkedin" src="assets/linkedin.png" alt="">
+                        <img class="github" src="https://pngimg.com/d/github_PNG83.png" alt="">
+                    </div>
+                    
+                </footer>
+                <div class="body"></div>
+            </body>
+    <script>
+        function login(){
+            window.location.href = `login.html`;
+        }
+    function cadastro(){
+        window.location.href = `cadastro.html`;
     }
-function cadastro(){
-    window.location.href = `cadastro.html`;
-}
+    function biografia(){
+        window.location.href = `biografia.html`;
+
+    }
+    function quiz(){
+        window.location.href = `quiz.html`;
+    }
+    function home(){
+        window.location.href = `index.html`;
+
+    }
+    function paises(){
+        window.location.href = `paises.html`;
+
+    }
 </script>
 </html>
+
+

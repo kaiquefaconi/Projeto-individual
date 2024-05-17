@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login_BOB</title>
+    <title>Login</title>
     <link rel="stylesheet" href="loginCSS.css">
 </head>
 
-<body>
-   
-    <div class="imgs"><span class="logo"><img src="assets/bob 1.png" alt=""></span></div>
+<body class="container">
+
+    <div class="imgs"><span class="logo"><img onclick="voltar()" src="assets/bob 1.png" alt=""></span></div>
 
     <div class="banner">
 
@@ -34,11 +34,12 @@
 </body>
 
 </html>
+
 <script>
     function cadastrar() {
         window.location.href = `cadastro.html`;
     }
-    function voltar(){
-    window.location.href = `index.html`;
-}
+    function voltar() {
+        window.location.href = `index.html`;
+    }
 </script>

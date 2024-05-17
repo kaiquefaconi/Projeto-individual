@@ -4,37 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro_BOB</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="cadastroCSS.css">
 </head>
 
-<body>
-    <div class="imgs"><span class="logo"><img src="assets/bob 1.png" alt=""></span></div>
+<body class="container">
 
-    <div class="banner">
-        <div class="cadastro">
-            <div class="box">
-                <span class="seta" onclick="voltar()"><img src="assets/Arrow 6.png" alt=""></span>
-                <h2>Acesse sua conta</h2>
-            </div>
 
-            <div class="linha">
-                <div class="inpt">Nome</div><input type="text" id="input_nome">
-                <div class="inpt">Sobrenome</div><input type="text" id="input_sobrenome">
-            </div>
+        <div class="imgs"><span class="logo"><img onclick="voltar()" src="assets/bob 1.png" alt=""></span></div>
 
-            <div class="linha">
-                <div class="inpt">Email </div><input type="text" id="input_email">
-                <div class="inpt">Senha </div> <input type="text" id="input_senha">
-            </div>
-            <span class="button_login"><button>Cadastrar</button></span><br>
-            <div class="cadastrar">Já possui Login? <span onclick="logar()" class="aqui"> Logar</span>
+        <div class="banner">
+            <div class="cadastro">
+                <div class="box">
+                    <span class="seta" onclick="voltar()"><img src="assets/Arrow 6.png" alt=""></span>
+                    <h2>Acesse sua conta</h2>
+                </div>
+
+                <div class="linha">
+                    <div class="inpt">Nome</div><input type="text" id="input_nome">
+                    <div class="inpt">Sobrenome</div><input type="text" id="input_sobrenome">
+                </div>
+
+                <div class="linha">
+                    <div class="inpt">Email </div><input type="text" id="input_email">
+                    <div class="inpt">Senha </div> <input type="text" id="input_senha">
+                </div>
+                <span class="button_login"><button>Cadastrar</button></span><br>
+                <div class="cadastrar">Já possui Login? <span onclick="logar()" class="aqui"> Logar</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    </div>
 
+   
 </body>
 
 </html>
@@ -42,7 +44,7 @@
     function logar() {
         window.location.href = `login.html`;
     }
-    function voltar(){
+    function voltar() {
         window.location.href = `index.html`;
     }
 </script>
