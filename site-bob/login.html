@@ -21,9 +21,9 @@
             </div>
 
             <div class="inpt_total">
-                <div class="inpt">Email </div> <input type="text" id="input_email">
-                <div class="inpt">Senha </div> <input type="text" id="input_senha">
-                <span class="button_login"><button>Login</button></span><br>
+                <div class="inpt">Email </div> <input type="text" id="input_email" placeholder="Email">
+                <div class="inpt">Senha </div> <input type="password" id="input_senha" placeholder="Senha">
+                <span class="button_login"><button onclick="login()">Login</button></span><br>
             </div>
             <div class="cadastrar">Ainda não possui Login? <span onclick="cadastrar()" class="aqui"> Cadastre-se</span>
             </div>
@@ -42,4 +42,63 @@
     function voltar() {
         window.location.href = `index.html`;
     }
+
+    var tentativas = 3;
+
+function login() {
+
+
+
+    var email = input_email.value;
+    var senha = input_senha.value;
+   
+
+    if (email != '' && senha != '') {
+
+        for (var i = tentativas; i > 0; i--) {
+
+            if (email == 'fernanda@gmail.com' && senha == '123') {
+
+                window.location.href = 'musicas.html';
+
+                input_email = '';
+                input_sennha = '';
+
+                tentativas = 3;
+
+                break;
+                
+            }
+
+            else {
+
+                tentativas--;
+
+                i = tentativas;
+
+                alert(`Login incorreto. Tentativas restantes: ${i}`);
+
+                break;
+
+            }
+
+        }
+
+        if (tentativas == 0) {
+
+            alert("Você não tem mais tentativas.")
+
+            window.location.href = 'index.html';
+            
+        }
+        
+    }
+
+    else {
+
+        alert("Preencha os Campos!");
+
+    }
+    
+}
 </script>

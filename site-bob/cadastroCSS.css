@@ -36,9 +36,11 @@ body {
    margin-top: 10px;
    margin-right: 370px;
    cursor: pointer;
+   transition: 1s;
    
-
-   
+}
+.seta:hover{
+    transform: scale(2.0);
 }
    
 
@@ -99,9 +101,13 @@ button{
     width: 200px;
     margin-bottom: 5px;
     font-size: 15px;
- 
-    border-radius: 5px;
+ transition: 2s;
+    border-radius: 100px;
     font-weight: bold;
+}
+button:hover{
+  transform: scale(1.2);
+  
 }
  .cadastrar{
     color: white;
@@ -109,6 +115,9 @@ button{
 
 
 }   
+::placeholder{
+    font-weight: bold;
+}
 .cadastrar .aqui{
 
     color: greenyellow;

@@ -178,7 +178,7 @@ body {
     height: 150px;
     cursor: pointer;
     width: 300px;
-    transition: 0.3s;
+    transition: 1s;
     margin-top: 10px;
     
 
@@ -212,8 +212,8 @@ body {
     cursor: pointer;
     height: 200px;
     width: 200px;
-    transition: 1s;
-  
+    transition: 1s; 
+  border-radius: 50%;
 }
 
 .banda:hover{

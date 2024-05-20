@@ -31,6 +31,10 @@ body {
          }
 }
 
+::placeholder{
+    
+    font-weight: bold;
+}
 .seta{
    display: flex;
    width: 10px;
@@ -38,9 +42,11 @@ body {
    margin-top: 10px;
    margin-right: 370px;
    cursor: pointer;
-   
-
-   
+   transition: 1s;
+      
+}
+.seta:hover{
+    transform: scale(2.0);
 }
    
 
@@ -101,8 +107,12 @@ button{
     width: 200px;
     margin-top: 20px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 100px;
     font-weight: bold;
+    transition: 2s;
+}
+button:hover{
+    transform: scale(1.2);
 }
  .cadastrar{
     color: white;
