@@ -22,22 +22,23 @@ body {
     z-index: 1;
 }
 
-.logo_header {
-    width: 50px;
-    margin-left: -30px;
-    border-radius: 50%;
-
-
+.logo_header{
+    width: 110px;
+    margin-right: 26px;
+    margin-top: 20px;
+    
+    
 }
 
 .header,
-.navigation_header {
+.navigation_header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-weight: 200;
+    /* margin-right: 5px; */
 }
-
-.header {
+.header{
     background-color: var(--color-dark2);
     justify-content: space-between;
     padding: 0 10%;
@@ -45,42 +46,41 @@ body {
     box-shadow: 1px 1px 4px var(--color-dark4);
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 3
 }
-
-.navigation_header {
+.navigation_header{
     gap: 3em;
     z-index: 2;
+    margin-left: 60px;
 }
-
-.content {
+.barra a{
+    color: white;
+    margin-right: 5px;
+}
+.content{
     padding-top: 5em;
     text-align: center;
     height: 100vh;
     transition: 1s;
 }
-
-.navigation_header a {
+.navigation_header a{
     text-decoration: none;
     color: var(--color-greenyellow);
     transition: 1s;
-    margin-right: 7.3px;
+   
 }
 .navigation_header .sobre{
     color: white;
 }
-
-.navigation_header a:hover {
+.navigation_header a:hover{
     color: var(--color-white);
 }
-
-.active {
+.active{
     background: var(--color-dark3);
     padding: 10px;
     border-radius: 10px;
 }
-
-.btn_icon_header {
+.btn_icon_header{
     background: transparent;
     border: none;
     color: var(--color-white);
@@ -88,36 +88,33 @@ body {
     display: none;
 }
 
-.login {
+.login{
     color: var(--color-greenyellow);
     cursor: pointer;
     transition: 1s;
-    font-weight: bold;
-    margin-left: 32px;
-  
+    /* margin-left: 17px; */
+    margin-right: 5px;
+
     
 }
-
-.login:hover {
+.login:hover{
     color: var(--color-white);
 }
-
-.cadastro {
+.cadastro{
     color: var(--color-greenyellow);
     cursor: pointer;
-    margin-right: 100px;
+    margin-left: 8px;
     transition: 1s;
-    font-weight: bold;
+ 
+} 
+.cadastro:hover{
+color: var(--color-white);
 }
-
-.cadastro:hover {
-    color: var(--color-white);
-}
-
-.entrada {
-    display: flex;
-    margin-right: 300px;
-}
+.entrada{
+        display: flex;
+        margin-right: 300px;  
+   
+    }
 
 .siteSobre {
     display: flex;

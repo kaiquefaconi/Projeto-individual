@@ -23,24 +23,13 @@ body {
     overflow-x: hidden;
 }
 
+
 .logo_header {
-    width: 48px;
-    margin-right: 73px;
-   
-    border-radius: 50%;
+    width: 110px;
+    margin-right: 13px;
+    margin-top: 20px;
 
 
-}
-
-.message {
-    color: white;
-}
-
-h3 {
-    display: flex;
-    align-items: start;
-    padding: 10px;
-    color: var(--color-greenyellow);
 }
 
 .header,
@@ -48,6 +37,7 @@ h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-weight: 200;
 }
 
 .header {
@@ -64,6 +54,7 @@ h3 {
 .navigation_header {
     gap: 3em;
     z-index: 2;
+    margin-left: 60px;
 }
 
 .content {
@@ -77,9 +68,14 @@ h3 {
     text-decoration: none;
     color: var(--color-greenyellow);
     transition: 1s;
- 
+
 }
-.navigation_header .musicas{
+.barra a{
+    color: white;
+    margin-right: 5px;
+}
+
+.navigation_header .musicas {
     color: white;
 }
 
@@ -105,7 +101,9 @@ h3 {
     color: var(--color-greenyellow);
     cursor: pointer;
     transition: 1s;
-    margin-left: 17px;
+    margin-left: 95px;
+    margin-right: 10px;
+
 
 }
 
@@ -118,7 +116,7 @@ h3 {
     cursor: pointer;
     margin-left: 8px;
     transition: 1s;
-   
+
 }
 
 .cadastro:hover {
@@ -127,35 +125,222 @@ h3 {
 
 .entrada {
     display: flex;
-    margin-right: 300px;
+    margin-right: 168px;
 }
 
-.container{
+.container {
     display: flex;
 }
 
-.coluna1{
+.coluna1 {
     display: flex;
     flex-direction: column;
     margin-top: 150px;
     padding: 30px;
     width: 700px;
 }
-h4{
+
+h4 {
     color: greenyellow;
 }
-h1{
+
+h1 {
     color: greenyellow;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
 
-.coluna2{
+.coluna2 {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: start;
     align-items: end;
-    padding: 0px 100px 0px 0px;
+    padding: 0px 200px 0px 0px;
 
+}
+
+audio {
+    display: flex;
+    border: solid 3px greenyellow;
+    border-radius: 100px;
+
+
+}
+
+.oneLove {
+    display: flex;
+    justify-content: start;
+    margin-top: -2900px;
+    margin-bottom: 200px;
+}
+
+.war {
+    margin-bottom: 350px;
+}
+
+.soldier {
+    margin-bottom: 300px;
+}
+
+.birds {
+    margin-bottom: 350px;
+}
+
+.getUp {
+    margin-bottom: 330px;
+}
+
+.love {
+    margin-bottom: 350px;
+}
+
+.inicial p{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-left: 540px;
+    margin-bottom: 80px;
+    
+}
+ h1 {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+} 
+
+.album p {
+    width: 600px;
+    align-items: center;
+    margin-left: 40px;
+
+}
+
+
+.album h4 {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.imgAlbum {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 100PX;
+    margin-left: 900px;
+
+
+}
+.imgAlbum img{
+    width: 100%;
+    height: 100%;
+}
+
+.imgAlbum img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.catch{
+    margin-top: -2350px;
+    margin-bottom: 100px;
+    
+}
+
+.burnin{
+    margin-bottom: 100px;
+}
+.natty{
+    margin-bottom: 100px;
+}
+.rasta{
+    margin-bottom: 180px;
+}
+.exodus{
+    margin-bottom: 120px;
+}
+.kaya{
+    margin-bottom: 150px;
+}
+.survival{
+    margin-bottom: 100px;
+    
+}
+.linha {
+    width: 100%;
+    height: 2px;
+
+    background-color: #fff;
+    margin-bottom: -1px;
+
+}
+
+footer {
+    display: flex;
+    height: 175px;
+    background-color: var(--color-dark5);
+
+
+
+}
+
+.infoFooter {
+    display: flex;
+    flex-direction: column;
+    margin-block: 50px;
+
+
+    a {
+        color: var(--color-greenyellow);
+    }
+}
+
+
+.imgsFooter {
+    padding-top: -100px;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 3px wheat; */
+    align-items: center;
+    width: 250px;
+    height: fit-content;
+    margin-block: 50px;
+
+}
+
+.linkedin {
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: -70px;
+    border: solid 2px white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.github {
+    width: 50px;
+    height: 50px;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin-top: 90px;
+    cursor: pointer;
+
+}
+
+.textoFooter {
+    display: flex;
+    text-align: center;
+    margin-inline: 50px;
+    margin-block: 50px;
+    font-size: medium;
+
+
+    .onu {
+        color: rgb(0, 187, 255);
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }

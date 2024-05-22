@@ -23,24 +23,13 @@ body {
     overflow-x: hidden;
 }
 
+
 .logo_header {
-    width: 48px;
-    margin-right: 73px;
-   
-    border-radius: 50%;
+    width: 110px;
+    margin-right: 13px;
+    margin-top: 20px;
 
 
-}
-
-.message {
-    color: white;
-}
-
-h3 {
-    display: flex;
-    align-items: start;
-    padding: 10px;
-    color: var(--color-greenyellow);
 }
 
 .header,
@@ -48,6 +37,7 @@ h3 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-weight: 200;
 }
 
 .header {
@@ -64,6 +54,7 @@ h3 {
 .navigation_header {
     gap: 3em;
     z-index: 2;
+    margin-left: 60px;
 }
 
 .content {
@@ -77,9 +68,14 @@ h3 {
     text-decoration: none;
     color: var(--color-greenyellow);
     transition: 1s;
- 
+
 }
-.navigation_header .paises{
+.barra a{
+    color: white;
+    margin-right: 5px;
+}
+
+.navigation_header .paises {
     color: white;
 }
 
@@ -105,7 +101,9 @@ h3 {
     color: var(--color-greenyellow);
     cursor: pointer;
     transition: 1s;
-    margin-left: 17px;
+    margin-left: 95px;
+    margin-right: 10px;
+
 
 }
 
@@ -118,7 +116,7 @@ h3 {
     cursor: pointer;
     margin-left: 8px;
     transition: 1s;
-   
+
 }
 
 .cadastro:hover {
@@ -127,7 +125,7 @@ h3 {
 
 .entrada {
     display: flex;
-    margin-right: 300px;
+    margin-right: 168px;
 }
 
 

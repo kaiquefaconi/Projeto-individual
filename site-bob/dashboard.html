@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="dashboardCSS.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    
+    <body>
+        <div class="header" id="header">
+            <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
+            <div class="entrada">
+                <a onclick="login()" class="login">Login </a>
+                <a class="barra"> | </a>
+                <a onclick="cadastro()" class="cadastro"> Cadastrar-se</a>
+            </div>
+            <div class="navigation_header" id="navigation_header">
+                <a onclick="home()" class="sobre" href="#sobre">Home</a>
+                <a onclick="biografia()" class="biografia" href="#biografia">Biografia</a>
+                <a onclick="paises()" class="paises" href="#paises">Paises</a>
+                <a onclick="musicas()" class="musicas" href="#musicas">Discografia e Canções</a>
+                <a onclick="quiz()" class="quiz" href="#quiz">Quiz</a>
+            </div>
+        </div>
+        <!-- <h1>Dashboards</h1> -->
+        <div class="canvas">
+        <canvas class="chart" id="myChart" ></canvas>
+    </div>
+    <div class="imgs"> <img src="assets/OIG4-removebg-preview (1).png" alt=""></div>
+    
+    
+    <script>
+        
+        const labels = [
+            '12:00',
+            '13:00',
+            '14:00',
+            '15:00',
+            '16:00',
+            '17:00',
+        ];
+        var incorretas =1
+        var corretas =1;
+        const data = {
+            labels: [
+                'Corretas',
+                'Incorretas',
+                
+            ],
+            datasets: [{
+                label: 'BobQuiz',
+                data: [corretas,incorretas ],
+                backgroundColor: [
+                    'yellow',
+                    'green',
+                    
+                    
+                ],
+                
+                hoverOffset: 10
+            }]
+        };
+        
+        
+        const config = {
+            type: 'doughnut',
+            data: data, options: {}
+            
+        }
+        
+        
+        
+        
+        
+        
+        </script>
+
+
+
+
+<script>
+    
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+    
+    </script>
+
+</html>
