@@ -13,6 +13,9 @@
 <body onload="validarSessao()">
     <div class="header" id="header">
         <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
+        <button onclick="sair()" id="sair" class="sair">Exit</button>
+        <div id="usuario" class="user"></div>
+
         <div id="entrada" class="entrada">
             <a onclick="login()" class="login">Login </a>
             <a class="barra"> | </a>
@@ -218,12 +221,26 @@
 </html>
 
 <script>
+   function sair() {
+        sessionStorage.clear();
+        document.getElementById("entrada").style.display = "block";
+        document.getElementById("dash").style.display = "none";
+        document.getElementById("musicas").style.display = "none";
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("sair").style.display = "none";
+        usuario.innerHTML = ``;
+        window.location.href = "login.html";
+    }
     function validarSessao() {
         var nome = sessionStorage.NOME_USUARIO;
         console.log(nome)
         if (nome != undefined) {
             document.getElementById("entrada").style.display = "none";
+            usuario.innerHTML = `Olá, ${nome}`;
+            document.getElementById("sair").style.display = "block";
+
         } else {
+            document.getElementById("sair").style.display = "none";
             document.getElementById("dash").style.display = "none";
             document.getElementById("musicas").style.display = "none";
             document.getElementById("quiz").style.display = "none";

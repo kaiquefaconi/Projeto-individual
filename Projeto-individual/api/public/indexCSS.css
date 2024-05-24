@@ -52,6 +52,22 @@ body {
     top: 0;
     z-index: 3
 }
+.sair{
+    width: 70px;
+    border-radius: 30px;
+    color: black;
+font-weight: 600;
+cursor: pointer;
+    background-color: rgb(20, 173, 20);
+}
+.sair:hover{
+    transition: 1s;
+    transform: scale(1.2);
+}
+.user{
+    margin-right: 200px;
+    color: var(--color-greenyellow);
+}
 .navigation_header{
     gap: 3em;
     z-index: 2;

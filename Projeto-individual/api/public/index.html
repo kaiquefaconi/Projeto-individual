@@ -17,7 +17,8 @@
 <body onload="validarSessao()">
     <div class="header" id="header">
         <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
-        <!-- <div id="usuario" class="usuario"></div> -->
+        <button id="sair" class="sair" onclick="sair()">Exit</button>
+        <div id="usuario" class="user"></div>
         <div id="entrada" class="entrada">
             <a onclick="login()" class="login">Login </a>
             <a class="barra"> |</a>
@@ -78,19 +79,29 @@
             </div>
 
         </footer>
-        <div class="body"></div>
+        
 </body>
 <script>
-
+    function sair() {
+        sessionStorage.clear();
+        document.getElementById("entrada").style.display = "block";
+        document.getElementById("dash").style.display = "none";
+        document.getElementById("musicas").style.display = "none";
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("sair").style.display = "none";
+        usuario.innerHTML = ``;
+        window.location.href = "login.html";
+    }
     function validarSessao() {
         var nome = sessionStorage.NOME_USUARIO;
         console.log(nome)
         if (nome != undefined) {
             document.getElementById("entrada").style.display = "none";
-
-
+            usuario.innerHTML = `Olá, ${nome}`;
+            document.getElementById("sair").style.display = "block";
 
         } else {
+            document.getElementById("sair").style.display = "none";
             document.getElementById("dash").style.display = "none";
             document.getElementById("musicas").style.display = "none";
             document.getElementById("quiz").style.display = "none";
@@ -122,8 +133,8 @@
         window.location.href = `musicas.html`;
 
     }
-    function dash(){
-window.location.href = `dashboard.html`;
+    function dash() {
+        window.location.href = `dashboard.html`;
     }
     function git() {
         location.href = "https://github.com/kaiquefaconi";

@@ -41,6 +41,22 @@ body {
     font-weight: 200;
     margin-right: 20%;
 }
+.sair{
+    width: 70px;
+    border-radius: 30px;
+    color: black;
+font-weight: 600;
+cursor: pointer;
+    background-color: rgb(20, 173, 20);
+}
+.sair:hover{
+    transition: 1s;
+    transform: scale(1.2);
+}
+.user{
+    margin-right: 200px;
+    color: var(--color-greenyellow);
+}
 .header{
     background-color: var(--color-dark2);
     width: 100%;
@@ -71,12 +87,12 @@ body {
     text-decoration: none;
     color: var(--color-greenyellow);
     transition: 1s;
-    /* margin-right: 50px; */
+ 
    
 }
 
 
-.navigation_header .sobre{
+.navigation_header .dash{
     color: white;
 }
 .navigation_header a:hover{

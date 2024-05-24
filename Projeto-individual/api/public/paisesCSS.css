@@ -38,6 +38,7 @@ body {
     font-weight: 200;
     margin-right: 20%;
 }
+
 .header{
     background-color: var(--color-dark2);
     width: 100%;
@@ -119,7 +120,22 @@ color: var(--color-white);
         margin-right: 300px;  
    
     }
-
+    .sair{
+        width: 70px;
+        border-radius: 30px;
+        color: black;
+    font-weight: 600;
+    cursor: pointer;
+        background-color: rgb(20, 173, 20);
+    }
+    .sair:hover{
+        transition: 1s;
+        transform: scale(1.2);
+    }
+    .user{
+        margin-right: 200px;
+        color: var(--color-greenyellow);
+    }
 
 
 
