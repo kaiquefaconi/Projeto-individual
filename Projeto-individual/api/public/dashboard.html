@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="dashboardCSS.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    
+    <body onload="validarSessao()">
+        <div class="header" id="header">
+            <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
+            <!-- <div id="usuario" class="usuario"></div> -->
+            <div id="entrada" class="entrada">
+                <a onclick="login()" class="login">Login </a>
+                <a class="barra"> |</a>
+                <a onclick="cadastro()" class="cadastro"> Cadastrar-se</a>
+            </div>
+            <div class="navigation_header" id="navigation_header">
+                <a onclick="home()" class="sobre" href="#sobre">Home</a>
+                <a onclick="biografia()" class="biografia" href="#biografia">Biografia</a>
+                <a onclick="paises()" class="paises" href="#paises">Paises</a>
+                <a id="musicas" onclick="musicas()" class="musicas" href="#musicas">Discografia e Canções</a>
+                <a id="quiz" onclick="quiz()" class="quiz" href="#quiz">Quiz</a>
+                <a onclick="dash() " class="dash" id="dash">Dashboards</a>
+            </div>
+        </div>
+           
+        <div class="canvas">
+
+            
+            <div class="chart"><canvas class="chart" id="myChart" ></canvas></div>
+            <div class="chart2"><canvas class="chart2" id="myChart2" ></canvas></div>
+            <h1>Dashboards</h1>
+        </div>
+        <div class="imgs"> <img src="assets/OIG4-removebg-preview (1).png" alt=""></div>
+    <div><h1>Dashboards</h1></div>
+    
+    
+    <script>
+        
+
+        var incorretas =1;
+        var corretas =29;
+        const data = {
+            labels: [
+                'Corretas',
+                'Incorretas',
+                
+            ],
+            datasets: [{
+                label: 'BobQuiz',
+                data: [corretas,incorretas ],
+                backgroundColor: [
+                    'yellow',
+                    'green',
+                    
+                    
+                ],
+                
+                hoverOffset: 5  
+            }]
+        };
+        
+        
+        const config = {
+            type: 'doughnut',
+            data: data, options: {}
+            
+        }
+        
+        
+        
+        
+        // var survival =1;
+        // var exodus =29;
+        // var catcha = 29;
+        // const data2 = {
+        //     labels: [
+        //         'survival',
+        //         'exodus',
+        //         'catcha',
+                
+        //     ],
+        //     datasets: [{
+        //         label: 'BobAlbum',
+        //         data2: [survival,exodus,catcha ],
+        //         backgroundColor: [
+        //             'yellow',
+        //             'green',
+        //             'red',
+                    
+                    
+        //         ],
+                
+        //         hoverOffset: 5  
+        //     }]
+        // };
+        
+        
+        // const config2 = {
+        //     type: 'bar',
+        //     data: data2, options: {}
+            
+        // }
+        const labels = Utils.months({count: 7});
+const data2 = {
+  labels: labels,
+  datasets: [{
+    label: 'Melhores albuns',
+    data: [65, 59, 80],
+    backgroundColor: [
+      'rgba(255, 99, 132, 0.2)',
+      'rgba(255, 159, 64, 0.2)',
+      'rgba(255, 205, 86, 0.2)',
+      'rgba(75, 192, 192, 0.2)',
+      'rgba(54, 162, 235, 0.2)'
+    ],
+    borderColor: [
+      'rgb(255, 99, 132)',
+      'rgb(255, 159, 64)',
+      'rgb(255, 205, 86)'
+    ],
+    borderWidth: 1
+  }]
+};
+const config2 = {
+  type: 'bar',
+  data: data2,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  },
+};
+        
+        
+        </script>
+
+
+
+
+<script>
+    
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );  
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+    
+    </script>
+
+</html>
+<script>
+     function validarSessao() {
+        var nome = sessionStorage.NOME_USUARIO;
+        console.log(nome)
+        if (nome != undefined) {
+            document.getElementById("entrada").style.display = "none";
+
+
+
+        } else {
+            document.getElementById("dash").style.display = "none";
+            document.getElementById("musicas").style.display = "none";
+            document.getElementById("quiz").style.display = "none";
+        }
+    }
+
+    function biografia(){
+        window.location.href = `biografia.html`;
+
+    }
+    function quiz(){
+        window.location.href = `quiz.html`;
+    }
+    function home(){
+        window.location.href = `index.html`;
+
+    }
+    function paises(){
+        window.location.href = `paises.html`;
+
+    }
+    function musicas(){
+    window.location.href = `musicas.html`;
+
+}
+</script>

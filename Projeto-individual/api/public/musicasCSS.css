@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-dark1: rgb(39, 39, 39);
+    --color-dark2: #2d2d2d;
+    --color-dark3: #414141;
+    --color-dark4: #1c1c1c;
+    --color-dark5: #343434;
+    --color-greenyellow: greenyellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    z-index: 1;
+}
+
+.logo_header{
+    width: 110px;
+    /* margin-right: 26px; */
+    margin-top: 20px;
+    
+    
+}
+
+.header,
+.navigation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 200;
+    margin-right: 20%;
+}
+.header{
+    background-color: var(--color-dark2);
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 3.5em;
+    box-shadow: 1px 1px 4px var(--color-dark4);
+    position: fixed;
+    top: 0;
+    z-index: 3
+}
+.navigation_header{
+    gap: 3em;
+    z-index: 2;
+    /* margin-left: 60px; */
+}
+.barra a{
+    color: white;
+    margin-right: 5px;
+}
+.content{
+    padding-top: 5em;
+    text-align: center;
+    height: 100vh;
+    transition: 1s;
+}
+.navigation_header a{
+    text-decoration: none;
+    color: var(--color-greenyellow);
+    transition: 1s;
+    /* margin-right: 50px; */
+   
+}
+.dash{
+    cursor: pointer;
+}
+
+.navigation_header .musicas{
+    color: white;
+}
+.navigation_header a:hover{
+    color: var(--color-white);
+}
+.active{
+    background: var(--color-dark3);
+    padding: 10px;
+    border-radius: 10px;
+}
+.btn_icon_header{
+    background: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+
+.login{
+    color: var(--color-greenyellow);
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 5px;
+
+    
+}
+.login:hover{
+    color: var(--color-white);
+}
+.cadastro{
+    color: var(--color-greenyellow);
+    cursor: pointer;
+    margin-left: 8px;
+    transition: 1s;
+   
+ 
+} 
+.cadastro:hover{
+color: var(--color-white);
+}
+.entrada{
+        display: flex;
+        margin-right: 300px;  
+   
+    }
+
+.container {
+    display: flex;
+}
+
+.coluna1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding: 30px;
+    width: 700px;
+}
+
+h4 {
+    color: greenyellow;
+}
+
+h1 {
+    color: greenyellow;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    padding: 0px 200px 0px 0px;
+
+}
+
+audio {
+    display: flex;
+    border: solid 3px greenyellow;
+    border-radius: 100px;
+
+
+}
+
+.oneLove {
+    display: flex;
+    justify-content: start;
+    margin-top: -2900px;
+    margin-bottom: 200px;
+}
+
+.war {
+    margin-bottom: 350px;
+}
+
+.soldier {
+    margin-bottom: 300px;
+}
+
+.birds {
+    margin-bottom: 350px;
+}
+
+.getUp {
+    margin-bottom: 330px;
+}
+
+.love {
+    margin-bottom: 350px;
+}
+
+.inicial p{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-left: 540px;
+    margin-bottom: 80px;
+    
+}
+ h1 {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+} 
+
+.album p {
+    width: 600px;
+    align-items: center;
+    margin-left: 40px;
+
+}
+
+
+.album h4 {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.imgAlbum {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 100PX;
+    margin-left: 900px;
+
+
+}
+.imgAlbum img{
+    width: 100%;
+    height: 100%;
+}
+
+.imgAlbum img:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.catch{
+    margin-top: -2350px;
+    margin-bottom: 100px;
+    
+}
+
+.burnin{
+    margin-bottom: 100px;
+}
+.natty{
+    margin-bottom: 100px;
+}
+.rasta{
+    margin-bottom: 180px;
+}
+.exodus{
+    margin-bottom: 120px;
+}
+.kaya{
+    margin-bottom: 150px;
+}
+.survival{
+    margin-bottom: 100px;
+    
+}
+.linha {
+    width: 100%;
+    height: 2px;
+
+    background-color: #fff;
+    margin-bottom: -1px;
+
+}
+
+footer {
+    display: flex;
+    height: 175px;
+    background-color: var(--color-dark5);
+
+
+
+}
+
+.infoFooter {
+    display: flex;
+    flex-direction: column;
+    margin-block: 50px;
+
+
+    a {
+        color: var(--color-greenyellow);
+    }
+}
+
+
+.imgsFooter {
+    padding-top: -100px;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 3px wheat; */
+    align-items: center;
+    width: 250px;
+    height: fit-content;
+    margin-block: 50px;
+
+}
+
+.linkedin {
+    margin-top: -10px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: -70px;
+    border: solid 2px white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.github {
+    width: 50px;
+    height: 50px;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin-top: 90px;
+    cursor: pointer;
+
+}
+
+.textoFooter {
+    display: flex;
+    text-align: center;
+    margin-inline: 50px;
+    margin-block: 50px;
+    font-size: medium;
+
+
+    .onu {
+        color: rgb(0, 187, 255);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

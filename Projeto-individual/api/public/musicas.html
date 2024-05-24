@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="musicasCSS.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body onload="validarSessao()">
+    <div class="header" id="header">
+        <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
+        <div id="entrada" class="entrada">
+            <a onclick="login()" class="login">Login </a>
+            <a class="barra"> | </a>
+            <a onclick="cadastro()" class="cadastro"> Cadastrar-se</a>
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <a onclick="home()" class="sobre" href="#sobre">Home</a>
+            <a onclick="biografia()" class="biografia" href="#biografia">Biografia</a>
+            <a onclick="paises()" class="paises" href="#paises">Paises</a>
+            <a onclick="musicas()" id="musicas" class="musicas" href="#musicas">Discografia e Canções</a>
+            <a onclick="quiz()" id="quiz" class="quiz" href="#quiz">Quiz</a>
+            <a onclick="dash() " class="dash()" id="dash">Dashboards</a>
+
+        </div>
+    </div>
+
+    <div class="conteiner">
+        <div class="coluna1">
+            <h1> Canções famosas </h1>
+
+            <h4>One Love/People Get Ready</h4><br>
+            <p> "One Love" é uma das músicas mais emblemáticas de Bob Marley, lançada inicialmente em 1965 com seu grupo
+                The Wailers e regravada em 1977
+                no álbum "Exodus". A canção é uma celebração vibrante e apaixonada da unidade e da paz, refletindo a
+                mensagem central do movimento Rastafari
+                ao qual Marley era devoto.
+
+                Com sua melodia contagiante e ritmo cativante de reggae, "One Love" convida as pessoas a se unirem e
+                compartilharem amor e harmonia.
+                A letra da música promove uma visão de esperança e solidariedade, pedindo um "coração" e um "amor" para
+                todos, independentemente das diferenças.
+                A simplicidade e a profundidade da mensagem de "One Love" continuam a ressoar mundialmente, tornando-se
+                um hino atemporal pela paz e fraternidade.</p><br><br>
+
+            <h4 class="aos" data-aos="fade-left" data-aos-delay="400">War</h4><br>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400">"War" é uma poderosa canção de Bob Marley, lançada
+                em 1976 no álbum "Rastaman Vibration". A letra da
+                música é diretamente
+                baseada no discurso proferido pelo Imperador Haile Selassie I da Etiópia na Assembleia Geral das Nações
+                Unidas em 1963.
+                Essa escolha reflete a profunda reverência de Marley por Selassie, uma figura central no movimento
+                Rastafari.
+
+                A canção "War" aborda temas de igualdade, justiça e a luta contra a opressão racial. Marley denuncia a
+                guerra e a
+                discriminação racial, clamando por um mundo onde todos os homens sejam tratados igualmente,
+                independentemente de cor
+                ou etnia. A música é um chamado à resistência contra a injustiça e a opressão até que esses objetivos
+                sejam alcançados.
+
+                Com seu ritmo reggae característico e sua mensagem potente, "War" é uma canção emblemática do
+                compromisso de Marley
+                com a causa dos direitos humanos e a luta contra a opressão global. A música continua a ser relevante e
+                inspiradora,
+                reafirmando o legado de Bob Marley como um defensor da paz e da igualdade.</p><br><br>
+
+            <h4 class="aos" data-aos="fade-left" data-aos-delay="400">Buffalo Soldier</h4><br>
+            <p class="aos" data-aos="fade-left" data-aos-delay="400">"Buffalo Soldier" é uma das canções mais conhecidas
+                de Bob Marley, lançada postumamente em 1983 no álbum
+                "Confrontation".
+                A música foi co-escrita por Marley e Noel "King Sporty" Williams.
+
+                "Buffalo Soldier" conta a história dos soldados afro-americanos, conhecidos como Buffalo Soldiers, que
+                serviram no
+                Exército dos Estados Unidos após a Guerra Civil, principalmente na luta contra os indígenas americanos
+                durante as
+                Guerras Indígenas. A letra da música reflete sobre a ironia de homens descendentes de escravos lutando
+                em um exército
+                que representava um país onde a opressão racial ainda era prevalente.
+
+                A canção tem um ritmo reggae envolvente e é marcada por seu refrão cativante, "Woy yoy yoy, woy yoy-yoy
+                yoy," que ressoa
+                com o espírito de resistência e resiliência. "Buffalo Soldier" é mais do que uma lição de história; é um
+                tributo à luta
+                e perseverança dos afro-americanos e uma crítica à injustiça e à opressão.
+
+                Com sua mensagem de orgulho e resistência, "Buffalo Soldier" continua a inspirar e educar, solidificando
+                o papel de
+                Bob Marley como um porta-voz global pela justiça social e a igualdade.
+            </p><br><br>
+
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Three little birds</h4><br>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400">"Three Little Birds" é uma das canções mais
+                adoradas de Bob Marley, lançada em 1977 no álbum "Exodus".
+                Conhecida por
+                seu refrão cativante "Don't worry about a thing, 'cause every little thing gonna be all right," a música
+                transmite uma
+                mensagem de esperança e otimismo.
+
+                A inspiração para "Three Little Birds" veio dos próprios passarinhos que Marley observava perto de sua
+                casa na Jamaica,
+                bem como das harmonias vocais do grupo The I-Threes, que frequentemente o acompanhava. A simplicidade da
+                melodia,
+                combinada com uma letra tranquilizadora, faz desta canção um hino de encorajamento e positividade.
+
+                "Three Little Birds" é marcada pelo seu ritmo reggae suave e sua mensagem reconfortante. A canção tem
+                sido usada
+                em diversos contextos para transmitir uma sensação de calma e segurança, reafirmando a ideia de que,
+                apesar das
+                dificuldades, tudo ficará bem.
+
+                Com sua combinação de melodia alegre e mensagem edificante, "Three Little Birds" continua a ser uma das
+                canções mais
+                icônicas e atemporais de Bob Marley, ressoando com ouvintes de todas as idades e culturas ao redor do
+                mundo.</p><br><br>
+
+            <h4 class="aos" data-aos="fade-left" data-aos-delay="400">Get up, stand up</h4><br>
+            <p class="aos" data-aos="fade-left" data-aos-delay="400">"Get Up, Stand Up" é uma música icônica de Bob
+                Marley e The Wailers, lançada em 1973 no álbum "Burnin'".
+                Co-escrita por Bob Marley e Peter Tosh, a canção é um poderoso hino de resistência e luta pelos direitos
+                humanos.
+
+                A letra de "Get Up, Stand Up" incentiva as pessoas a se levantarem e lutarem contra a opressão e a
+                injustiça.
+                Com frases marcantes como "Get up, stand up: stand up for your rights!" e "Don't give up the fight!", a
+                música promove
+                uma mensagem de empoderamento e ação.
+
+                O ritmo contagiante do reggae, combinado com a mensagem fervorosa da letra, tornou "Get Up, Stand Up"
+                uma canção
+                emblemática nos movimentos de direitos civis e sociais ao redor do mundo. A canção é frequentemente
+                associada ao
+                espírito de resistência e resiliência que marcou a carreira de Marley.
+
+                "Get Up, Stand Up" continua a inspirar gerações, lembrando a todos da importância de defender a justiça
+                e a igualdade.
+                Com sua mensagem atemporal, a música solidifica o legado de Bob Marley como um defensor apaixonado pelos
+                direitos
+                humanos e pela liberdade.</p><br><br>
+
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Is this love</h4><br>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Is This Love" é uma das canções mais conhecidas
+                e amadas de Bob Marley, lançada em 1978 no álbum
+                "Kaya".
+                A música é uma celebração do amor genuíno e sincero, destacando o desejo de Marley de cuidar e
+                compartilhar sua vida
+                com alguém especial.
+
+                Com seu ritmo reggae suave e melodia cativante, "Is This Love" captura a essência do sentimento de amor
+                verdadeiro.
+                A letra expressa a vontade de Marley de construir um lar cheio de amor e carinho, refletindo um lado
+                mais pessoal e
+                romântico de sua música. Frases como "I wanna love you and treat you right" e "We'll be together, with a
+                roof right
+                over our heads" ilustram seu desejo de uma relação baseada na ternura e no compromisso.
+
+                A simplicidade e sinceridade da letra, combinadas com a vibração acolhedora da música, fizeram de "Is
+                This Love" um
+                sucesso duradouro, tocando corações ao redor do mundo. A canção continua a ser um símbolo de amor e
+                afeto, reafirmando
+                o talento de Bob Marley para criar músicas que ressoam profundamente com seus ouvintes.
+
+                "Is This Love" permanece um clássico intemporal no repertório de Bob Marley, destacando-se como uma bela
+                declaração de
+                amor e um exemplo da habilidade única de Marley de combinar letras profundas com melodias envolventes.
+            </p><br><br>
+
+            <h4 class="aos" data-aos="fade-left" data-aos-delay="400">Stir It Up</h4><br>
+            <p class="aos" data-aos="fade-left" data-aos-delay="400">"Stir It Up" é uma das músicas mais conhecidas de
+                Bob Marley, inicialmente lançada em 1967 pelos The
+                Wailers e regravada
+                em 1973 no álbum "Catch a Fire". A canção é uma ode ao romance e à paixão, com uma vibe suave e sedutora
+                que se tornou
+                uma marca registrada do reggae de Marley.
+
+                A letra de "Stir It Up" usa metáforas culinárias para expressar amor e desejo, com frases como "Stir it
+                up; little
+                darlin', stir it up" e "It's been a long, long time, yeah! Since I've got you on my mind." Essas
+                palavras evocam a
+                ideia de reacender a chama do amor, tornando a música tanto romântica quanto sensualmente envolvente.
+
+                Com seu ritmo relaxante e melodia cativante, "Stir It Up" destaca-se pela sua simplicidade e pela
+                capacidade de criar
+                uma atmosfera íntima e aconchegante. A combinação do vocal distintivo de Marley com a harmonia dos
+                instrumentos cria
+                uma experiência auditiva que é ao mesmo tempo tranquila e eletrizante.
+
+                "Stir It Up" é um clássico que exemplifica o talento de Bob Marley para misturar temas de amor e paixão
+                com o ritmo
+                irresistível do reggae. A música continua a ser celebrada por sua autenticidade e seu poder de conectar
+                emocionalmente
+                com os ouvintes, mantendo-se relevante e apreciada ao longo das décadas.</p><br><br>
+
+            <p>Essas são apenas algumas das muitas músicas incríveis que compõem a discografia de Bob Marley.
+                Sua música continua a inspirar e impactar pessoas em todo o mundo, transcendendo barreiras culturais e
+                geracionais.</p>
+
+        </div>
+
+        <div class="coluna2">
+
+            <audio controls class="oneLove" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source src="assets/y2meta.com - Bob Marley - One Love (Clip Officiel) (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+
+            <audio controls class="war" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source src="assets/y2meta.com - War - Bob Marley (320 kbps).mp3" type="audio/mpeg">
+            </audio><br><br>
+
+            <audio controls class="soldier" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source
+                    src="assets/y2meta.com - Bob Marley & The Wailers - Buffalo Soldier (Official Music Video) (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+
+            <audio controls class="birds" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source src="assets/y2meta.com - Bob Marley- Three Little Birds (With Lyrics!) (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+
+            <audio controls class="getUp" class="aos" data-aos="fade-right" data-aos-delay="400">
+
+                <source src="assets/y2meta.com - Bob Marley - Get Up Stand Up [HQ Sound] (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+            <audio controls class="love" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source src="assets/y2meta.com - Bob Marley - Is This Love (Official Music Video) (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+            <audio controls class="stir" class="aos" data-aos="fade-right" data-aos-delay="400">
+                <source
+                    src="assets/y2meta.com - Bob Marley & The Wailers - Stir It Up (Live at The Old Grey Whistle, 1973) (320 kbps).mp3"
+                    type="audio/mpeg">
+            </audio><br><br>
+
+        </div>
+        <div class="inicial" class="aos" data-aos="fade-right" data-aos-delay="400">
+
+            <h1> Álbuns Principais</h1>
+            <p>Bob Marley é conhecido por uma discografia extensa e influente, composta por álbuns que se tornaram
+                clássicos e canções que transcenderam gerações. Aqui está uma visão geral de alguns dos álbuns mais
+                icônicos de Bob Marley e algumas de suas canções mais famosas.</p>
+        </div>
+
+        <div class="album">
+
+
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Catch a Fire (1973)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> Gravado na Jamaica e finalizado em Londres,
+                "Catch a Fire" é notável por seu som polido e influências do
+                rock,
+                além dos tradicionais ritmos de reggae. A produção contou com a colaboração de Chris Blackwell, fundador
+                da Island
+                Records, que ajudou a moldar o som do álbum para atrair o público internacional. <br>
+                O álbum inclui faixas icônicas como "Concrete Jungle," "Stir It Up" e "Slave Driver," que abordam temas
+                como opressão,
+                resistência e o cotidiano jamaicano. "Catch a Fire" é frequentemente aclamado pela crítica e é
+                considerado um dos álbuns
+                mais influentes da música reggae. Ele ajudou a estabelecer Bob Marley como uma estrela global e a levar
+                o reggae a um
+                público mais amplo.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Burnin' (1973)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Burnin'" é o quarto álbum de estúdio da icônica
+                banda de reggae Bob Marley and the Wailers, lançado em
+                1973. Este
+                álbum apresenta uma mistura vibrante de mensagens sociais e políticas com batidas cativantes e letras
+                profundas.
+                Canções como "Get Up, Stand Up" e "I Shot the Sheriff" tornaram-se hinos de resistência e emancipação.
+                "Burnin'"
+                encapsula o espírito revolucionário de Bob Marley e sua missão de promover a justiça social e a unidade
+                através da
+                música. Com uma fusão única de reggae, rock e soul, este álbum continua a inspirar gerações de fãs em
+                todo o mundo.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Natty Dread (1974)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Natty Dread" é o quinto álbum de estúdio de Bob
+                Marley and the Wailers, lançado em 1974. Este álbum
+                marca a transição
+                de Marley para uma carreira solo e apresenta uma variedade de influências musicais, incluindo reggae,
+                ska e rocksteady.
+                Com músicas como "No Woman, No Cry", "Revolution" e "Lively Up Yourself", "Natty Dread" incorpora
+                mensagens de esperança,
+                amor e resistência, enquanto celebra a cultura e a identidade jamaicanas. O álbum é aclamado por sua
+                habilidade em
+                capturar a essência do reggae e consolidar o status de Bob Marley como um dos mais importantes e
+                influentes artistas
+                do gênero.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Rastaman Vibration (1976)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400">"Rastaman Vibration" é o oitavo álbum de estúdio
+                de Bob Marley and the Wailers, lançado em 1976. Este
+                álbum é
+                uma afirmação poderosa da espiritualidade rastafári e da mensagem de união e liberdade. Com faixas como
+                "Roots,
+                Rock, Reggae", "Positive Vibration" e "War", Marley combina batidas cativantes com letras profundas que
+                abordam
+                questões sociais e políticas. "Rastaman Vibration" é uma celebração da cultura jamaicana e uma chamada à
+                ação para
+                a libertação de todas as formas de opressão. Este álbum solidificou ainda mais o status de Bob Marley
+                como uma voz
+                influente no cenário musical mundial e um ícone do reggae.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Exodus (1977)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400">
+                "Exodus" é o nono álbum de estúdio de Bob Marley and the Wailers, lançado em 1977. Este álbum é
+                amplamente
+                considerado como um dos maiores e mais influentes álbuns de reggae de todos os tempos. Com uma mistura
+                de ritmos
+                cativantes e letras profundas, "Exodus" é uma jornada musical que aborda questões sociais, espirituais e
+                políticas.
+                Faixas como "Jamming", "Three Little Birds" e a faixa-título "Exodus" se tornaram hinos atemporais,
+                transmitindo
+                mensagens de amor, esperança e liberdade. O álbum reflete o compromisso de Bob Marley com a unidade,
+                a paz e a justiça, enquanto cativa os ouvintes com seu som inconfundível e sua voz carismática. "Exodus"
+                solidificou ainda mais o status de Bob Marley como uma lenda da música e um ícone cultural global.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Kaya (1978)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Kaya" é o décimo álbum de estúdio de Bob Marley
+                and the Wailers, lançado em 1978. Este álbum é uma ode à serenidade,
+                ao amor e à espiritualidade, refletindo a influência da cultura jamaicana e da filosofia rastafári na
+                música de Marley.
+                Com faixas como "Easy Skanking", "Is This Love" e "Kaya", o álbum transmite uma vibe descontraída e
+                ensolarada,
+                celebrando a vida e a natureza. "Kaya" é muitas vezes visto como uma contrapartida mais leve e relaxada
+                ao álbum
+                anterior, "Exodus", oferecendo uma paleta musical diversificada que incorpora elementos de reggae, rock
+                e soul.
+                Este álbum demonstra a versatilidade de Bob Marley como músico e compositor, enquanto continua a
+                transmitir
+                mensagens de paz, amor e unidade.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Survival (1979)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Survival" é o décimo primeiro álbum de estúdio
+                de Bob Marley and the Wailers, lançado em 1979. Este álbum é uma
+                poderosa declaração política e social, destacando questões de opressão, resistência e emancipação. Com
+                faixas como
+                "Africa Unite", "Zimbabwe" e "Survival", Marley emprega sua música como uma ferramenta para unificar e
+                fortalecer
+                as vozes da diáspora africana. As letras profundas e os ritmos cativantes celebram a luta pela liberdade
+                e a busca
+                pela justiça, refletindo a missão de Marley de inspirar mudanças positivas através da música. "Survival"
+                é um
+                testemunho da resiliência e da determinação do povo, enquanto continua a inspirar gerações com sua
+                mensagem de
+                esperança e unidade.</p>
+            <h4 class="aos" data-aos="fade-right" data-aos-delay="400">Uprising (1980)</h4>
+            <p class="aos" data-aos="fade-right" data-aos-delay="400"> "Uprising" é o décimo segundo e último álbum de
+                estúdio lançado em vida por Bob Marley and the Wailers, chegando
+                ao público em 1980. Este álbum continua a tradição de Marley de usar sua música como veículo para
+                mensagens sociais
+                e espirituais, mas também mostra uma inclinação mais pessoal e reflexiva. Faixas como "Could You Be
+                Loved",
+                "Redemption Song" e "Coming in from the Cold" são exemplos marcantes do compromisso de Marley com a
+                justiça social,
+                o amor e a emancipação. "Uprising" é um testemunho do legado duradouro de Bob Marley, capturando a
+                essência de sua
+                música e sua influência como um ícone cultural e líder espiritual. O álbum é uma poderosa expressão de
+                esperança e
+                resistência, ecoando através do tempo com sua mensagem atemporal.</p>
+        </div>
+
+        <div class="imgAlbum">
+
+            <img class="catch" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_18-removebg-preview.png" alt="">
+            <img class="burnin" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_19-removebg-preview.png" alt="">
+            <img class="natty" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_20-removebg-preview.png" alt="">
+            <img class="rasta" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_21-removebg-preview.png" alt="">
+            <img class="exodus" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_22-removebg-preview.png" alt="">
+            <img class="kaya" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_24-removebg-preview.png" alt="">
+            <img class="survival" class="aos" data-aos="fade-right" data-aos-delay="400"
+                src="assets/image_25-removebg-preview.png" alt="">
+            <img class="uprising" class="aos" data-aos="fade-right" data-aos-delay="400" src="assets/uprising.png"
+                alt="">
+        </div>
+
+        <div class="linha"></div>
+        <footer>
+
+
+            <div class="textoFooter">
+                <p>Inspirado pelas mensagens de paz de Bob Marley, nosso site apoia o <a
+                        href="https://www.ipea.gov.br/ods/ods16.html#:~:text=Promover%20sociedades%20pacíficas%20e%20inclusivas,inclusivas%20em%20todos%20os%20níveis"
+                        class="onu" onclick="objetivo16()">Objetivo 16 da ONU</a>,
+                    que busca promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e
+                    construir
+                    instituições eficazes,
+                    responsáveis e inclusivas. Junte-se a nós na celebração do legado de Bob Marley e na promoção de um
+                    mundo mais justo e harmonioso.
+                </p>
+            </div>
+            <div class="imgsFooter">
+                <img onclick="linkedin()" class="linkedin" src="assets/linkedin.png" alt="">
+                <img onclick="git()" class="github" src="https://pngimg.com/d/github_PNG83.png" alt="">
+            </div>
+
+        </footer>
+
+</body>
+
+</html>
+<script>
+    function validarSessao() {
+        var nome = sessionStorage.NOME_USUARIO;
+        console.log(nome)
+        if (nome != undefined) {
+            document.getElementById("entrada").style.display = "none";
+        } else {
+            document.getElementById("dash").style.display = "none";
+            document.getElementById("musicas").style.display = "none";
+            document.getElementById("quiz").style.display = "none";
+        }
+    }
+    function login() {
+        window.location.href = `login.html`;
+    }
+    function cadastro() {
+        window.location.href = `cadastro.html`;
+    }
+    function biografia() {
+        window.location.href = `biografia.html`;
+    }
+    function home() {
+        window.location.href = `index.html`;
+
+    }
+    function paises() {
+        window.location.href = `paises.html`;
+
+    }
+    function quiz() {
+        window.location.href = `quiz.html`;
+    }
+    function musicas() {
+        window.location.href = `musicas.html`;
+
+    }
+    function dash() {
+        window.location.href = `dashboard.html`;
+    }
+    function git() {
+        location.href = "https://github.com/kaiquefaconi";
+    }
+    function linkedin() {
+        location.href = "https://www.linkedin.com/in/kaique-faconi-873117217/";
+    }
+    AOS.init();
+</script>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastroCSS.css">
+</head>
+
+<body class="container">
+
+
+    <div class="imgs"><span class="logo"><img onclick="voltar()" src="assets/bob 1.png" alt=""></span></div>
+
+    <div class="banner">
+        <div class="cadastro">
+            <div class="box">
+                <span class="seta" onclick="voltar()"><img src="assets/Arrow 6.png" alt=""></span>
+                <h2>Acesse sua conta</h2>
+            </div>
+
+            <div class="linha">
+                <div class="inpt">Nome</div><input type="text" id="input_nome" placeholder="Nome">
+                <div class="inpt">Sobrenome</div><input type="text" id="input_sobrenome" placeholder="Sobrenome">
+            </div>
+
+            <div class="linha">
+                <div class="inpt">Email </div><input type="text" id="input_email" placeholder="Email">
+                <div class="inpt">Senha </div> <input type="text" id="input_senha" placeholder="Senha">
+                <div class="inpt">Confirmar senha</div> <input type="text" id="input_confirmacao"
+                    placeholder="Confirme sua senha">
+                <div class="select">Album preferido</div><select id="select_album">
+                    <option value="#">Selecione um album</option>
+                    <option value="1">Catch a Fire</option>
+                    <option value="2">Exodus</option>
+                    <option value="3">Survival</option>
+                </select>
+            </div>
+            <div id="div_erro" "></div>
+            <span class="button_login"><button onclick="cadastrar()">Cadastrar</button></span><br>
+            <div class="cadastrar">Já possui Login? <span onclick="logar()" class="aqui"> Logar</span>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_nome.value;
+        var sobrenomeVar = input_sobrenome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var confirmacaoSenhaVar = input_confirmacao.value;
+        var selectVar = select_album.value;
+   
+        if (
+            nomeVar == "" ||
+            sobrenomeVar == "" ||
+            emailVar == "" ||
+            senhaVar == "" ||
+            confirmacaoSenhaVar == "" ||
+            selectVar == ""
+        ) {
+            // div_erro.style.display = "block";
+            // mensagem_erro.innerHTML =
+               alert ("Todos os campos estão em branco");
+
+           
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                selectServer: selectVar
+               
+            }),
+        })
+       
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    // div_erro.style.display = "block";
+
+                    // mensagem_erro.innerHTML =
+                       alert ("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                    limparFormulario();
+                   
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+               
+            });
+
+        return false;
+    }
+
+   
+    function sumirMensagem() {
+        div_erro.style.display = "none";
+    }
+    function logar() {
+        window.location.href = `login.html`;
+    }
+    function voltar() {
+        window.location.href = `index.html`;
+    }
+</script>
