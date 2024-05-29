@@ -22,7 +22,7 @@ function autenticar(req, res) {
 
                        
                                     res.json({
-                                        id: resultadoAutenticar[0].id,
+                                        id: resultadoAutenticar[0].idUsuario,
                                         email: resultadoAutenticar[0].email,
                                         nome: resultadoAutenticar[0].nome,
                                         senha: resultadoAutenticar[0].senha                                     
@@ -88,7 +88,116 @@ function cadastrar(req, res) {
     }
 }
 
+function finishGame(req, res){
+   var id = req.body.idServer;
+    var idquiz = req.body.idquiz;
+    var totalCorrect = req.body.totalCorrect;
+    var totalIncorrect = req.body.totalIncorrect;
+   
+    if(totalCorrect == undefined){
+        res.status(400).send("Erro!");
+    }
+    if(totalIncorrect == undefined){
+        res.status(400).send("Erro!");
+    }else{
+        usuarioModel.finishGame( id,idquiz, totalCorrect, totalIncorrect )
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );  
+    }
+}
+
+function album(req, res){
+     
+    usuarioModel.album().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado da segunda pergunta!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as respostas: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function quizResultado(req, res){
+    
+    var id = req.body.idServer;
+    console.log("idResultado" + id);
+    usuarioModel.quizResultado(id)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        ); 
+}
+
+function kpi1(req, res){
+    usuarioModel.kpi1().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado da segunda pergunta!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as respostas: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+function kpi2(req, res){
+    var id = req.body.idServer;
+    console.log("idResultadokpi" + id);
+    usuarioModel.kpi2(id)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        ); 
+
+}
+
+
+
+
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar, 
+    finishGame,
+    album,
+    quizResultado,
+    kpi1,
+    kpi2
 }

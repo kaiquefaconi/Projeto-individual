@@ -14,6 +14,7 @@ function startJogo() {
     startButton.classList.add("hide");
     perguntaContainer.classList.remove("hide");
     displayProximaPergunta();
+
 }
 
 function displayProximaPergunta() {
@@ -61,36 +62,85 @@ function selectAnswer(event) {
     currentQuestion++;
 }
 
+
 function finishGame() {
     var totalQuestion = questions.length;
     var performance = Math.floor((totalCorrect * 100) / totalQuestion);
+    var totalIncorrect = 10 - totalCorrect;
+var idquiz = 1;
+var id = sessionStorage.ID_USUARIO;
+    // var message = "";
 
-    var message = "";
 
-    if (performance >= 80) {
-        message = "Parabéns! Você é um verdadeiro fã de Bob Marley!<br> Você conhece tudo sobre o rei do reggae!";
-    } else if (performance >= 60) {
-        message = "Quase lá!<br>Seu conhecimento sobre Bob Marley é muito bom. Faltam poucos detalhes para você se tornar um expert!";
-    } else if (performance >= 50) {
-        message = "Boa performance! Acertar 50% mostra que você conhece bastante sobre Bob Marley. Não pare por aqui, 'Get up, stand up' e continue!";
-    } else if (performance >= 30) {
-        message = "Você está no início da jornada!<br>Você acertou algumas questões. Como Bob Marley dizia, 'Love the life you live. Live the life you love.' Continue explorando e aprendendo!";
-    } else {
-        message = "Não desanime!<br>. Como Bob Marley diria, 'Get up, stand up, don't give up the fight!' Continue aprendendo e tentando novamente!";
-    }
-    
-    perguntaContainer.innerHTML = `<p class="mensagem_final">Você acertou ${totalCorrect} de ${totalQuestion} questões!<span>Resultado: ${message}</span></p> 
-    <button onclick="window.location.reload()" class="button">
-    Refazer quiz!
-    </button>`;
 
-    
+    // if (performance >= 80) {
+    //     message = "Parabéns! Você é um verdadeiro fã de Bob Marley!<br> Você conhece tudo sobre o rei do reggae!";
+    // } else if (performance >= 60) {
+    //     message = "Quase lá!<br>Seu conhecimento sobre Bob Marley é muito bom. Faltam poucos detalhes para você se tornar um expert!";
+    // } else if (performance >= 50) {
+    //     message = "Boa performance! Acertar 50% mostra que você conhece bastante sobre Bob Marley. Não pare por aqui, 'Get up, stand up' e continue!";
+    // } else if (performance >= 30) {
+    //     message = "Você está no início da jornada!<br>Você acertou algumas questões. Como Bob Marley dizia, 'Love the life you live. Live the life you love.' Continue explorando e aprendendo!";
+    // } else {
+    //     message = "Não desanime!<br>. Como Bob Marley diria, 'Get up, stand up, don't give up the fight!' Continue aprendendo e tentando novamente!";
+    // }
+
+    perguntaContainer.innerHTML = `<p class="mensagem_final">Quer ver o resultado? Clique aqui!</span></p> 
+    <a href="dashboard.html" class="dash">Dashboards</a>` ;
+
+
     nextButton.classList.add("hide");
 
-   
-    nextButton.removeEventListener("click", displayProximaPergunta);
-}
 
+    nextButton.removeEventListener("click", displayProximaPergunta);
+
+    fetch("/usuarios/finishGame", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+           idServer: id,
+            idquiz: idquiz,
+            totalCorrect: totalCorrect,
+            totalIncorrect: totalIncorrect
+         
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO quiz()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                sessionStorage.id = json.id;
+                sessionStorage.idquiz = json.idquiz;
+                sessionStorage.Acertos = json.totalCorrect;
+                sessionStorage.Erros = json.totalIncorrect;
+             
+
+
+            });
+
+        } else {
+            console.log("Houve um erro ao terminar o quiz!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+
+            });
+
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+
+
+}
 
 
 var questions = [
@@ -106,11 +156,11 @@ var questions = [
     {
         question: "Qual é o nome completo de Bob Marley?",
         answer: [
-        { text: "Robert Nesta Marley", correct: true },
+            { text: "Robert Nesta Marley", correct: true },
             { text: "Robert Nigel Marley", correct: false },
             { text: "Robert Nelson Marley", correct: false },
             { text: "Robert Nathan Marley", correct: false },
-        ],  
+        ],
     },
     {
         question: "Qual era o nome da banda de Bob Marley?",
@@ -151,7 +201,7 @@ var questions = [
     {
         question: "Qual foi o último álbum de estúdio lançado por Bob Marley antes de sua morte?",
         answer: [
-            { text: "Uprising", correct: true},
+            { text: "Uprising", correct: true },
             { text: "Survival", correct: false },
             { text: "Confrontation", correct: false },
             { text: "Exodus", correct: false },
@@ -185,24 +235,24 @@ var questions = [
         ],
     },
 ];
-function login(){
+function login() {
     window.location.href = `login.html`;
 }
-function cadastro(){
-window.location.href = `cadastro.html`;
+function cadastro() {
+    window.location.href = `cadastro.html`;
 }
-function biografia(){
-window.location.href = `biografia.html`;
+function biografia() {
+    window.location.href = `biografia.html`;
 
 }
-function quiz(){
-window.location.href = `quiz.html`;
+function quiz() {
+    window.location.href = `quiz.html`;
 }
-function home(){
-window.location.href = `index.html`;
+function home() {
+    window.location.href = `index.html`;
 
 }
-function paises(){
-window.location.href = `paises.html`;
+function paises() {
+    window.location.href = `paises.html`;
 
 }

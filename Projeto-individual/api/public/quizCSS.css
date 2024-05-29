@@ -36,6 +36,12 @@ body {
 }
 button {
     cursor: pointer;
+    align-items: center;
+
+}
+.dash{
+color: white;
+    cursor: pointer;
 }
 
 .container {

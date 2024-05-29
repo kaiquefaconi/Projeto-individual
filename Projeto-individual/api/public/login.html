@@ -46,13 +46,14 @@
 
     var tentativas = 3;
 
-   
+
 
     function entrar() {
 
 
         var emailVar = input_email.value;
         var senhaVar = input_senha.value;
+      
 
         if (emailVar == "" || senhaVar == "") {
             div_erro.style.display = "block"
@@ -66,6 +67,7 @@
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
+       
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -74,7 +76,8 @@
             },
             body: JSON.stringify({
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+            
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -85,9 +88,9 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.EMAIL_USUARIO = json.email;
 
                     setTimeout(function () {
                         window.location = "dashboard.html";
@@ -108,11 +111,11 @@
                     if (tentativas == 0) {
 
                         alert("Você não tem mais tentativas.")
-                        setTimeout(function() {
-            sumirMensagem();
-        }, 5000); 
+                        setTimeout(function () {
+                            sumirMensagem();
+                        }, 5000);
                         window.location.href = 'index.html';
-                        
+
 
 
                     }
@@ -133,6 +136,6 @@
     function sumirMensagem() {
         div_erro.style.display = "none"
     }
-    
+
 
 </script>

@@ -91,9 +91,40 @@ cursor: pointer;
    
 }
 
+.kpi1{
+width: 230px;
+height: 200px;
+border: 2px solid white;
+margin-top: -220px;
+margin-left: 250px;
+border-radius: 10px;
+text-align: center;
+}
+
+.imgkpi{
+    max-width: 50px;
+    margin-top: -100px;
+}
+.imgkpi img{
+    width: 100%;
+    margin-left: 340px;
+    
+}
+
+.kpi2{
+    width: 230px;
+    height: 200px;
+    border: 2px solid white;
+    margin-left: 950px;
+    margin-top: -205px;
+border-radius: 10px;
+text-align: center;
+
+
+}
 
 .navigation_header .dash{
-    color: white;
+    color:#fff;
 }
 .navigation_header a:hover{
     color: var(--color-white);
