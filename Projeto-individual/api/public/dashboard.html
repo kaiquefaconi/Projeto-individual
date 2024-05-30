@@ -14,8 +14,7 @@
 <body onload="validarSessao() ">
     <div class="header" id="header">
         <img onclick="home()" class="logo_header" src="assets/OIG4-removebg-preview (1).png" alt="">
-
-        <button onclick="sair() " class="sair" id="sair">Exit</button>
+        <button id="sair" class="sair" onclick="sair()">Exit</button>
         <div id="usuario" class="user"></div>
         <div id="entrada" class="entrada">
             <a onclick="login()" class="login">Login </a>
@@ -31,7 +30,6 @@
             <a onclick="dash() " class="dash" id="dash">Dashboards</a>
         </div>
     </div>
-
 
     <div class="canvas">
 
@@ -58,8 +56,8 @@
 
     <div id="kpi1" class="kpi1"> </div>
     <div id="kpi2" class="kpi2"></div>
-    <div class="imgkpi"><img src="https://ifce.edu.br/fortaleza/selecoes/jpgs/verificado.png/@@images/image.png" alt="">
-    </div>
+    <!-- <div class="imgkpi"><img src="https://ifce.edu.br/fortaleza/selecoes/jpgs/verificado.png/@@images/image.png" alt="">
+    </div> -->
 
 
 
@@ -325,8 +323,8 @@
                 label: 'Quiz-Bob',
                 data: [AcertosGrafico, ErrosGrafico],
                 backgroundColor: [
+                    'yellow',
                     '#EE675C',
-                    '#A2D5AB',
 
                 ],
                 hoverOffset: 4
@@ -360,7 +358,7 @@
         console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
 
         let mediaAcertos = dados.map(item => item.Acertos)
-        kpi1.innerHTML += `A media de acertos é ${mediaAcertos}`;
+        kpi1.innerHTML += `A média de acertos é de<br> <span class ='tentativas' > ${mediaAcertos} </span><br><br>no quiz `;
 
     }
     function plotarGrafico_4(dados) {
@@ -369,7 +367,7 @@
         let tentativas = dados.map(item => item.numero_tentativas);
         console.log("media acertos" + tentativas);
 
-        kpi2.innerHTML += `Você fez o quiz ${tentativas} vezes`;
+        kpi2.innerHTML += `Você fez o quiz <br> <span class ='tentativas' > ${tentativas} <br> </span><br> vezes`;
 
     }
 

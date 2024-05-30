@@ -41,7 +41,7 @@ function album() {
     COUNT(CASE WHEN album = '1' THEN 1 END) AS 'Option1',
     COUNT(CASE WHEN album = '2' THEN 1 END) AS 'Option2',
     COUNT(CASE WHEN album = '3' THEN 1 END) AS 'Option3'
-    FROM Usuario;`;
+    FROM usuario;`;
     
     console.log("Executando as instrução SQL: \n" + instrucaoSql1);
     return database.executar(instrucaoSql1);

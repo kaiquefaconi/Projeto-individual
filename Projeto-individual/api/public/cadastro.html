@@ -61,7 +61,8 @@
         var senhaVar = input_senha.value;
         var confirmacaoSenhaVar = input_confirmacao.value;
         var selectVar = select_album.value;
-   
+        var indice_arroba = emailVar.indexOf('@');
+        var indice_ponto = emailVar.indexOf('.');
         if (
             nomeVar == "" ||
             sobrenomeVar == "" ||
@@ -76,7 +77,10 @@
 
            
             return false;
-        } else {
+        }else if(nomeVar.length < 3 || indice_arroba <= 0 ||  indice_ponto <=0 || senhaVar.length <=3 || confirmacaoSenhaVar != senhaVar || selectVar =="#" ){
+            alert ("Campos com valores inválidos");
+            return false;
+         }else {
             setInterval(sumirMensagem, 5000);
         }
 
