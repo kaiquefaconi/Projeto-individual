@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Raleway';
+    font-family: 'Poppins';
     background-color: var(--color-dark1);
     color: var(--color-white);
     z-index: 1;
@@ -93,7 +93,7 @@ cursor: pointer;
 }
 
 
-.navigation_header .sobre{
+.navigation_header .dash{
     color: white;
 }
 .navigation_header a:hover{
@@ -272,4 +272,18 @@ font-weight: bold;
 }
 
 
+}
+
+.quiz_tentativas{
+    margin-left: 955px;
+    cursor: pointer;
+}
+
+.clique_aqui{
+    color: blue;
+    
+}
+
+.grafico1{
+    margin-left: 26px;
 }

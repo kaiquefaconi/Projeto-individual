@@ -48,7 +48,7 @@
                 Bob Marley. Deixe-se levar pela música, pelo ativismo e pela alma eterna deste visionário. Bem-vindo ao
                 universo de Bob Marley</p>
             <span class="red">Quiz</span><br>
-            <img onclick="quiz()" class="banda" src="assets/image 28.png""></div> 
+            <img id="quiz_id" onclick="quiz_img()" class="banda" src="assets/image 28.png""></div> 
                 </div>
                 <div class=" wailers">
             <span class="green">Biografia </span> <img onclick="biografia()" class="carreira"
@@ -99,8 +99,10 @@
             document.getElementById("entrada").style.display = "none";
             usuario.innerHTML = `Olá, ${nome}`;
             document.getElementById("sair").style.display = "block";
+            
 
         } else {
+    
             document.getElementById("sair").style.display = "none";
             document.getElementById("dash").style.display = "none";
             document.getElementById("musicas").style.display = "none";
@@ -120,6 +122,15 @@
     }
     function quiz() {
         window.location.href = `quiz.html`;
+    }
+    function quiz_img() {
+        var nome = sessionStorage.NOME_USUARIO;
+        if(nome !=undefined ){
+            window.location.href = `quiz.html`;
+        }else{
+        window.location.href = `login.html`;
+
+        }
     }
     function home() {
         window.location.href = `index.html`;
