@@ -53,7 +53,7 @@ cursor: pointer;
     align-items: center;
     font-weight: 200;
     margin-right: 20%;
-    font-family: 'Raleway';
+    font-family: 'Poppins';
 
 }
 .header{
@@ -154,7 +154,7 @@ h1{
   
 }
 .inicio h3{
-    margin-bottom: 4px;
+  
     color: var(--color-greenyellow);
 }
 .coluna1 {
@@ -169,6 +169,8 @@ h1{
 
 h3{
     color: var(--color-greenyellow);
+    margin-bottom: 8px;
+
 }
 .coluna2 {
     display: flex;

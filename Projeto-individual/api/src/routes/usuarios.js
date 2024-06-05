@@ -30,6 +30,12 @@ router.get("/kpi1", function(req,res){
 router.post("/kpi2", function(req,res){
     usuarioController.kpi2(req,res);
 });
+router.post("/kpi3", function(req,res){
+    usuarioController.kpi3(req,res);
+});
+router.post("/kpi4", function(req,res){
+    usuarioController.kpi4(req,res);
+});
 
 
 module.exports = router;

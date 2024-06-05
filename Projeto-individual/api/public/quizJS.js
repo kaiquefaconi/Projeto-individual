@@ -65,25 +65,9 @@ function selectAnswer(event) {
 
 function finishGame() {
     var totalQuestion = questions.length;
-    var performance = Math.floor((totalCorrect * 100) / totalQuestion);
     var totalIncorrect = 10 - totalCorrect;
 var idquiz = 1;
 var id = sessionStorage.ID_USUARIO;
-    // var message = "";
-
-
-
-    // if (performance >= 80) {
-    //     message = "Parabéns! Você é um verdadeiro fã de Bob Marley!<br> Você conhece tudo sobre o rei do reggae!";
-    // } else if (performance >= 60) {
-    //     message = "Quase lá!<br>Seu conhecimento sobre Bob Marley é muito bom. Faltam poucos detalhes para você se tornar um expert!";
-    // } else if (performance >= 50) {
-    //     message = "Boa performance! Acertar 50% mostra que você conhece bastante sobre Bob Marley. Não pare por aqui, 'Get up, stand up' e continue!";
-    // } else if (performance >= 30) {
-    //     message = "Você está no início da jornada!<br>Você acertou algumas questões. Como Bob Marley dizia, 'Love the life you live. Live the life you love.' Continue explorando e aprendendo!";
-    // } else {
-    //     message = "Não desanime!<br>. Como Bob Marley diria, 'Get up, stand up, don't give up the fight!' Continue aprendendo e tentando novamente!";
-    // }
 
     perguntaContainer.innerHTML = `<p class="mensagem_final">Quer ver o resultado? Clique aqui!</span></p> 
     <a href="dashboard.html" class="dash">Dashboards</a>` ;

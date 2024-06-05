@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboards</title>
     <link rel="stylesheet" href="dashboardCSS.css">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboardjs.js"></script>
 </head>
 
 <body onload="validarSessao() ">
@@ -30,354 +31,58 @@
             <a onclick="dash() " class="dash" id="dash">Dashboards</a>
         </div>
     </div>
-
+    
+    <div class="geral1">
+        <div class="kpisGeral">
+            <div class="textoKpi">Média geral do quiz  <div id="kpi1"></div></div>
+           
+            <div class="textoKpi">Tentativas no quiz   <div id="kpi2"></div></div>
+          
+            <div class="textoKpi">Sua maior pontuação  <div id="kpi3"></div></div>
+           
+            <div class="textoKpi">Seu álbum favorito <div id="kpi4"></div></div>
+            
+        </div>
+    </div>
+        
     <div class="canvas">
+        <div class="grafico1">
 
-        <div class="chart">
             <div class="qtd frase1">
                 <p>Desempenho no quiz:</p>
             </div>
-            <div id="grafico1" class="grafico1"></div>
-            <canvas id="myChart"></canvas>
+            <div class="chart">
+                <div id="grafico1" class="grafico1"></div>
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
 
-        <div class="chart2">
+
+        <div class="grafico2">
+
             <div class="qtd frase2">
                 <p>Pessoas que preferem o álbum:</p>
             </div>
-            <canvas id="myChart2"></canvas>
+            <div class="chart2">
+                <canvas id="myChart2"></canvas>
+            </div>
+
         </div>
-        <h1>Dashboards</h1>
     </div>
+    <div class="total" id="total"></div>
 
-    <div class="imgs"> 
+    <!-- <div class="imgs">
         <img src="assets/OIG4-removebg-preview (1).png" alt="">
-    </div>
-    
-
-    <div id="kpi1" class="kpi1"> </div>
-    <div id="kpi2" class="kpi2"></div>
-    <!-- <div class="imgkpi"><img src="https://ifce.edu.br/fortaleza/selecoes/jpgs/verificado.png/@@images/image.png" alt="">
     </div> -->
+    <!-- <div class="imgkpi"><img src="https://ifce.edu.br/fortaleza/selecoes/jpgs/verificado.png/@@images/image.png" alt=""> -->
+    <!-- </div>  -->
     <div id="quiz_tentativas" class="quiz_tentativas" onclick="quiz()"></div>
 
 
 
 </html>
 <script>
-    var id = sessionStorage.ID_USUARIO;
-    obterDadosGrafico();
-    function validarSessao() {
-        var nome = sessionStorage.NOME_USUARIO;
-        console.log(nome)
-        if (nome != undefined) {
-            document.getElementById("entrada").style.display = "none";
+    
 
-
-
-        } else {
-            document.getElementById("dash").style.display = "none";
-            document.getElementById("musicas").style.display = "none";
-            document.getElementById("quiz").style.display = "none";
-        }
-    }
-
-    function biografia() {
-        window.location.href = `biografia.html`;
-
-    }
-    function quiz() {
-        window.location.href = `quiz.html`;
-    }
-    function home() {
-        window.location.href = `index.html`;
-
-    }
-    function paises() {
-        window.location.href = `paises.html`;
-
-    }
-    function musicas() {
-        window.location.href = `musicas.html`;
-
-    }
-
-
-
-    function sair() {
-        sessionStorage.clear();
-        document.getElementById("entrada").style.display = "block";
-        document.getElementById("dash").style.display = "none";
-        document.getElementById("musicas").style.display = "none";
-        document.getElementById("quiz").style.display = "none";
-        document.getElementById("sair").style.display = "none";
-        usuario.innerHTML = ``;
-        window.location.href = "login.html";
-    }
-    function validarSessao() {
-        var nome = sessionStorage.NOME_USUARIO;
-        console.log(nome)
-        if (nome != undefined) {
-            document.getElementById("entrada").style.display = "none";
-            usuario.innerHTML = `Olá, ${nome}`;
-            document.getElementById("sair").style.display = "block";
-
-        } else {
-            document.getElementById("sair").style.display = "none";
-            document.getElementById("dash").style.display = "none";
-            document.getElementById("musicas").style.display = "none";
-            document.getElementById("quiz").style.display = "none";
-        }
-    }
-    function obterDadosGrafico() {
-        fetch(`/usuarios/album/`)
-            .then(function (resposta) {
-                if (resposta.ok) {
-                    resposta.json().then(function (dados) {
-                        console.log("Dados recebidos: ", JSON.stringify(dados));
-
-                        plotarGrafico_1(dados);
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado da pergunta1 ou erro na API');
-                }
-            })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-
-        fetch("/usuarios/quizResultado", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idServer: id
-            })
-        }).then(function (resposta) {
-            console.log("quizResultado caiu aqui")
-
-            if (resposta.ok) {
-                console.log("resposta quizGrafico" + resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    var obj = JSON.stringify(json);
-                    sessionStorage.id = json.id;
-                    console.log(obj);
-                    plotarGrafico_2(json);
-
-                });
-
-            } else {
-                console.log("Houve um erro ao terminar o quiz!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-
-                });
-
-            }
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-        fetch(`/usuarios/kpi1/`)
-            .then(function (resposta) {
-                if (resposta.ok) {
-                    resposta.json().then(function (dados) {
-                        console.log("Dados recebidos: ", JSON.stringify(dados));
-
-
-                        plotarGrafico_3(dados);
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado na kpi1 ou erro na API');
-                }
-            })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-        fetch("/usuarios/kpi2", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                idServer: id
-            })
-        }).then(function (resposta) {
-            console.log("kpi2 caiu")
-
-            if (resposta.ok) {
-                console.log("resposta kpi2" + resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    var obj = JSON.stringify(json);
-                    sessionStorage.id = json.id;
-                    console.log(obj);
-                    plotarGrafico_4(json);
-
-                });
-
-            } else {
-                console.log("Houve um erro ao terminar o quiz!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-
-                });
-
-            }
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-
-    }
-    function plotarGrafico_1(dados) {
-        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
-        console.log('Iniciando plotagem do gráfico...');
-
-
-        let labels = [''];
-        let option1 = dados.map(item => item.Option1);
-        let option2 = dados.map(item => item.Option2);
-        let option3 = dados.map(item => item.Option3);
-
-        let chartData = {
-            labels: labels,
-            datasets: [{
-                label: 'Survival',
-                data: [option1],
-                // borderColor: '#B0CDDA',
-                backgroundColor: '#EE675C',
-                // borderWidth: 2
-            },
-            {
-                label: 'Exodus',
-                data: [option2],
-                // borderColor: '#EE675C',
-                backgroundColor: '#A2D5AB',
-                // borderWidth: 2
-            },
-            {
-                label: 'Catch a fire',
-                data: [option3],
-                borderColor: '#A2D5AB',
-                backgroundColor: 'yellow',
-                // borderWidth: 2
-            },]
-        };
-
-        console.log('----------------------------------------------');
-        console.log('Estes dados foram recebidos pela função "obterDadosGrafico" e passados para "plotarGrafico":');
-        console.log(dados);
-
-        console.log('----------------------------------------------');
-        console.log('O gráfico será plotado com os respectivos valores:');
-        console.log('Labels:');
-        console.log(labels);
-        console.log('Dados:');
-        console.log(option1, option2, option3);
-        console.log('----------------------------------------------');
-
-        const config = {
-            type: 'bar',
-            data: chartData,
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            stepSize: 1
-                        }
-                    }
-                }
-            }
-        };
-
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById('myChart2'),
-            config
-        );
-    }
-    function plotarGrafico_2(dados) {
-        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
-        console.log('Iniciando plotagem do gráfico...');
-
-        // Criando estrutura para plotar gráfico - labels e data
-        let labels = [''];
-        let AcertosGrafico = dados.map(item => item.Acertos);
-        console.log("acertos" + AcertosGrafico);
-        let ErrosGrafico = dados.map(item => item.Erros);
-        console.log("erros" + ErrosGrafico);
-        if(AcertosGrafico <=0 && ErrosGrafico <=0){
-            grafico1.innerHTML += `Se você não fez o quiz <span class= 'clique_aqui'> clique aqui!</span>`;
-        }else{
-
-            
-            let chartData = {
-                labels: [
-                    'Acertos',
-                    'Erros'
-                    
-                ],
-                datasets: [{
-                    label: 'Quiz-Bob',
-                    data: [AcertosGrafico, ErrosGrafico],
-                    backgroundColor: [
-                        'yellow',
-                        '#EE675C',
-                        
-                    ],
-                    hoverOffset: 4
-                }]
-            };
-            
-            
-            // Criando estrutura para plotar gráfico - config
-            const config = {
-                type: 'doughnut',
-                data: chartData,
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                stepSize: 1
-                            }
-                        }
-                    }
-                }
-            };
-            
-            // Adicionando gráfico criado em div na tela
-            let myChart = new Chart(
-                document.getElementById('myChart'),
-                config
-            );
-        }
-    }
-        function plotarGrafico_3(dados) {
-        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
-
-        let mediaAcertos = dados.map(item => item.Acertos)
-        kpi1.innerHTML += `A média de acertos é de<br> <span class ='tentativas' > ${mediaAcertos} </span><br><br>no quiz `;
-
-    }
-    function plotarGrafico_4(dados) {
-        console.log("Dados recebidos no plotar: ", JSON.stringify(dados));
-
-        let tentativas = dados.map(item => item.numero_tentativas);
-        console.log("media acertos" + tentativas);
-
-        kpi2.innerHTML += `Você teve <br> <span class ='tentativas' > ${tentativas} <br> </span><br> tentativa(s) `;
-        if(tentativas<=0){
-            quiz_tentativas.innerHTML += `Se você não fez o quiz <span class= 'clique_aqui'> clique aqui!</span>`;
-        }
-
-    }
 
 </script>

@@ -187,7 +187,47 @@ function kpi2(req, res){
         ); 
 
 }
+function kpi3(req, res){
+    var id = req.body.idServer;
+    console.log("idResultadokpi" + id);
+    usuarioModel.kpi3(id)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        ); 
 
+}
+
+function kpi4(req, res){
+    var id = req.body.idServer;
+    console.log("idResultadokpi" + id);
+    usuarioModel.kpi4(id)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao finalizar o quiz! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        ); 
+
+}
 
 
 
@@ -199,5 +239,7 @@ module.exports = {
     album,
     quizResultado,
     kpi1,
-    kpi2
+    kpi2,
+    kpi3,
+    kpi4
 }

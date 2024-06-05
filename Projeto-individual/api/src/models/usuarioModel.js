@@ -74,11 +74,28 @@ function kpi2(id) {
     var instrucaoSql1 = `
     SELECT COUNT(*) AS 'numero_tentativas'
     FROM ligacao
-    WHERE fkUsuario = ${id};`;
+    WHERE fkUsuario = ${id}`;
     
     console.log("Executando as instrução SQL: \n" + instrucaoSql1);
     return database.executar(instrucaoSql1);
 }
+function kpi3(id) {
+    console.log("ACESSEI O DASH MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function kpi3()", id);
+    var instrucaoSql1 = `
+    select max(acertos) as acertosmax from ligacao where fkUsuario = ${id}`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+function kpi4(id) {
+    console.log("ACESSEI O DASH MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function kpi4()", id);
+    var instrucaoSql1 = `
+    select album from usuario where idUsuario = ${id}`;
+    
+    console.log("Executando as instrução SQL: \n" + instrucaoSql1);
+    return database.executar(instrucaoSql1);
+}
+
 
 module.exports = {
     autenticar,
@@ -87,6 +104,8 @@ module.exports = {
     album,
     quizResultado,
     kpi1,
-    kpi2
+    kpi2,
+    kpi3,
+    kpi4
 
 };
